@@ -1,0 +1,62 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.wrap {
+  width: 400px;
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
+}
+.frame {
+  width: 400px;
+  height: 350px;
+  border: 0;
+  -ms-transform: scale(0.79);
+  -moz-transform: scale(0.79);
+  -o-transform: scale(0.79);
+  -webkit-transform: scale(0.79);
+  transform: scale(0.79);
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+nav {
+  background-color:slategray;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav li{
+  list-style: none;
+}
+
+nav li a{
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 8px;
+  font-size: large;
+}
+
+nav li a:hover{
+  color:yellow;
+  text-decoration: none;
+  
+}
