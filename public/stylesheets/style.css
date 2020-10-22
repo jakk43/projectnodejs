@@ -1,11 +1,8 @@
 body {
 
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
 
 nav {
   background-color:rgb(102, 68, 223);
@@ -29,7 +26,7 @@ nav li a{
   color:rgb(30, 255, 0);
   text-decoration: none;
   font-weight: bold;
-  padding: 5px 8px;
+  padding: 6px 8px;
   font-size: large;
 }
 
@@ -45,8 +42,8 @@ nav li a:hover{
   height: 400px;
   display: block;
   border-style:none;
-  -ms-transform: scale(0.79);
-  -moz-transform: scale(0.79);
+  /* -ms-transform: scale(0.79);
+  -moz-transorm: scale(0.79);
   -o-transform: scale(0.79);
   -webkit-transform: scale(0.79);
   transform: scale(0.79);
@@ -54,14 +51,14 @@ nav li a:hover{
   -moz-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
+  transform-origin: 0 0; */
 }
 .frame2 {
-  width: 510px;
-  height: 400px;
+  width: 560px;
+  height: 700px;
   display: block;
   border-style:none;
-  -ms-transform: scale(0.5);
+  /* -ms-transform: scale(0.5);
   -moz-transform: scale(0.5);
   -o-transform: scale(0.5);
   -webkit-transform: scale(0.5);
@@ -70,12 +67,5 @@ nav li a:hover{
   -moz-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-
-.h2p{
-  display: block;
-  float: right;
-  border: solid;
-  margin-top: 1%;
+  transform-origin: 0 0; */
 }
