@@ -7,31 +7,9 @@ a {
   color: #00B7FF;
 }
 
-.wrap {
-  width: 400px;
-  height: 400px;
-  padding: 0;
-  overflow: hidden;
-}
-.frame {
-  width: 400px;
-  height: 350px;
-  border: 0;
-  -ms-transform: scale(0.79);
-  -moz-transform: scale(0.79);
-  -o-transform: scale(0.79);
-  -webkit-transform: scale(0.79);
-  transform: scale(0.79);
-  -ms-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-
 nav {
-  background-color:slategray;
-  padding: 30px 60px;
+  background-color:rgb(102, 68, 223);
+  padding: 10px 60px;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
@@ -48,7 +26,7 @@ nav li{
 }
 
 nav li a{
-  color:black;
+  color:rgb(30, 255, 0);
   text-decoration: none;
   font-weight: bold;
   padding: 5px 8px;
@@ -59,4 +37,45 @@ nav li a:hover{
   color:yellow;
   text-decoration: none;
   
+}
+
+
+.frame {
+  width: 560px;
+  height: 400px;
+  display: block;
+  border-style:none;
+  -ms-transform: scale(0.79);
+  -moz-transform: scale(0.79);
+  -o-transform: scale(0.79);
+  -webkit-transform: scale(0.79);
+  transform: scale(0.79);
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.frame2 {
+  width: 510px;
+  height: 400px;
+  display: block;
+  border-style:none;
+  -ms-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(1);
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.h2p{
+  display: block;
+  float: right;
+  border: solid;
+  margin-top: 1%;
 }
