@@ -4,15 +4,32 @@ body {
 }
 
 
-nav {
+.search{
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 300px;
+    /* border: solid; */
+  
+}
+
+#searchCenter{
+    margin: 0 auto;
+}
+
+
+
+/* nav {
   background-color:rgb(102, 68, 223);
   padding: 10px 60px;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-}
+} */
 
-nav ul {
+/* nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -34,7 +51,7 @@ nav li a:hover{
   color:yellow;
   text-decoration: none;
   
-}
+} */
 
 
 .frame {
@@ -69,3 +86,5 @@ nav li a:hover{
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0; */
 }
+
+
