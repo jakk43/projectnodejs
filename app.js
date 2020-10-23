@@ -27,6 +27,8 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var covid_19Router = require('./routes/covid_19');
+var helpRouter = require('./routes/help');
+
 
 var app = express();
 
@@ -46,6 +48,9 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/covid_19', covid_19Router);
+app.use('/help', helpRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
