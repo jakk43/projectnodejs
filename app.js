@@ -27,8 +27,9 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var covid_19Router = require('./routes/covid_19');
+var contentRouter = require('./routes/content');
 var helpRouter = require('./routes/help');
-
+const bodyParser = require('body-parser');
 
 var app = express();
 
@@ -42,13 +43,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/covid_19', covid_19Router);
+app.use('/content', contentRouter);
 app.use('/help', helpRouter);
+
 
 
 
