@@ -19,6 +19,11 @@ body {
 
 #searchCenter{
     margin: 0 auto;
+    border: solid;
+}
+
+.cont{
+  padding-top: 20px;
 }
 
 
