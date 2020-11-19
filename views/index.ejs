@@ -55,32 +55,55 @@
 
 
 
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title" id="place_name"  > </h5>
-      <p class="card-text" id="introduction"> </p>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+  <div class="container mt-4">
+    <div class="card-deck">
+      <div class="card">
+        <div class="containerimg" >
+          <img src="" class="card-img-top" alt="..." id="thumbnail_url" >
+          <button class="btn">Save</button>
+        </div>
+        
+
+        <div class="card-body">
+          <h5 class="card-title" id="place_name"></h5>
+          <p class="card-text" id="introduction"></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
     </div>
-
-
-
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-
   </div>
-
-
-
-
-
-
-
 
 
 
@@ -108,15 +131,21 @@
     }).done(function (data) {
       $("#place_name").append(place_name(data));
       $("#introduction").append(introduction(data));
+      $("#thumbnail_url").attr('src', thumbnail_url(data));
 
 
     });
 
-    function place_name(data){
-      return data.result.place_name+"<br>"
-  }
-    function introduction(data){
+    function place_name(data) {
+      return data.result.place_name + "<br>"
+    }
+
+    function introduction(data) {
       return data.result.place_information.introduction
+    }
+
+    function thumbnail_url(data) {
+      return data.result.thumbnail_url
     }
   </script>
 

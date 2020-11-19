@@ -1,28 +1,26 @@
-
-
 body {
 
   font: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 
-.search{
-  
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 300px;
-    /* border: solid; */
-  
+.search {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 300px;
+  /* border: solid; */
+
 }
 
-#searchCenter{
-    margin: 0 auto;
-    border: solid;
+#searchCenter {
+  margin: 0 auto;
+  border: solid;
 }
 
-.cont{
+.cont {
   padding-top: 20px;
 }
 
@@ -65,7 +63,7 @@ nav li a:hover{
   width: 560px;
   height: 400px;
   display: block;
-  border-style:none;
+  border-style: none;
   /* -ms-transform: scale(0.79);
   -moz-transorm: scale(0.79);
   -o-transform: scale(0.79);
@@ -77,11 +75,12 @@ nav li a:hover{
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0; */
 }
+
 .frame2 {
   width: 560px;
   height: 700px;
   display: block;
-  border-style:none;
+  border-style: none;
   /* -ms-transform: scale(0.5);
   -moz-transform: scale(0.5);
   -o-transform: scale(0.5);
@@ -92,4 +91,34 @@ nav li a:hover{
   -o-transform-origin: 0 0;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0; */
+}
+.containerimg {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.containerimg img {
+  width: 100%;
+  height: auto;
+}
+
+.containerimg .btn {
+  position: absolute;
+  top: 9.5%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.containerimg .btn:hover {
+  background-color: black;
 }
