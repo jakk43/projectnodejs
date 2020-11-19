@@ -73,18 +73,30 @@
     <div class="card-deck">
       <div class="card">
         <div class="containerimg" >
-          <img src="" class="card-img-top" alt="..." id="thumbnail_url" >
+          <img  class="card-img-top" alt="..." id="thumbnail_url" >
           <button class="btn">Save</button>
         </div>
-        
-
         <div class="card-body">
           <h5 class="card-title" id="place_name"></h5>
           <p class="card-text" id="introduction"></p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="card">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -117,14 +129,9 @@
 
 
 
-
-
-
-
-
   <script>
     $.ajax({
-      url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000001",
+      url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000053",
       headers: {
         "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
       }
@@ -132,12 +139,10 @@
       $("#place_name").append(place_name(data));
       $("#introduction").append(introduction(data));
       $("#thumbnail_url").attr('src', thumbnail_url(data));
-
-
     });
 
     function place_name(data) {
-      return data.result.place_name + "<br>"
+      return data.result.place_name 
     }
 
     function introduction(data) {
@@ -148,6 +153,40 @@
       return data.result.thumbnail_url
     }
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
