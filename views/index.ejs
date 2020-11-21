@@ -107,11 +107,48 @@
     </div>
   </div>
 
+<!-- line2 -->
 
 
 
 
-
+<div class="container mt-4">
+  <div class="card-deck">
+    <div class="card">
+      <div class="containerimg">
+        <img class="card-img-top" alt="..." id="thumbnail_url4">
+        <button class="btn">Save</button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="place_name4"></h5>
+        <p class="card-text" id="introduction4"></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="containerimg">
+        <img class="card-img-top" alt="..." id="thumbnail_url5">
+        <button class="btn">Save</button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="place_name5"></h5>
+        <p class="card-text" id="introduction5"></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="containerimg">
+        <img class="card-img-top" alt="..." id="thumbnail_url6">
+        <button class="btn">Save</button>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="place_name6"></h5>
+        <p class="card-text" id="introduction6"></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -120,8 +157,6 @@
 
 
   <script>
-
-
     function place1() {
       $.ajax({
         url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000056",
@@ -137,7 +172,7 @@
     }
     function place2() {
       $.ajax({
-        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000057",
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000001",
         headers: {
           "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
         }
@@ -150,7 +185,7 @@
     }
     function place3() {
       $.ajax({
-        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000058",
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000041",
         headers: {
           "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
         }
@@ -162,8 +197,56 @@
       });
     }
 
-    $.when(place1(), place2(),place3()).done(function (place1_data, place2_data,place3_data) {
+    // line2
 
+
+    function place4() {
+      $.ajax({
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000056",
+        headers: {
+          "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
+        }
+      }).done(function (data) {
+        $("#place_name4").append(place_name(data));
+        $("#introduction4").append(introduction(data));
+        $("#thumbnail_url4").attr('src', thumbnail_url(data));
+
+      });
+    }
+    function place5() {
+      $.ajax({
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000001",
+        headers: {
+          "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
+        }
+      }).done(function (data) {
+        $("#place_name5").append(place_name(data));
+        $("#introduction5").append(introduction(data));
+        $("#thumbnail_url5").attr('src', thumbnail_url(data));
+
+      });
+    }
+    function place6() {
+      $.ajax({
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000041",
+        headers: {
+          "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
+        }
+      }).done(function (data) {
+        $("#place_name6").append(place_name(data));
+        $("#introduction6").append(introduction(data));
+        $("#thumbnail_url6").attr('src', thumbnail_url(data));
+
+      });
+    }
+
+
+
+
+
+
+    $.when(place1(), place2(),place3(),place4(), place5(),place6()).done(function 
+    (place1_data, place2_data,place3_data,place4_data, place5_data,place6_data) {
     });
 
 
