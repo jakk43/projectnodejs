@@ -72,8 +72,8 @@
   <div class="container mt-4">
     <div class="card-deck">
       <div class="card">
-        <div class="containerimg" >
-          <img  class="card-img-top" alt="..." id="thumbnail_url" >
+        <div class="containerimg">
+          <img class="card-img-top" alt="..." id="thumbnail_url">
           <button class="btn">Save</button>
         </div>
         <div class="card-body">
@@ -82,35 +82,25 @@
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <div class="containerimg">
+          <img class="card-img-top" alt="..." id="thumbnail_url2">
+          <button class="btn">Save</button>
+        </div>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <h5 class="card-title" id="place_name2"></h5>
+          <p class="card-text" id="introduction2"></p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <div class="containerimg">
+          <img class="card-img-top" alt="..." id="thumbnail_url3">
+          <button class="btn">Save</button>
+        </div>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
+          <h5 class="card-title" id="place_name3"></h5>
+          <p class="card-text" id="introduction3"></p>
           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
@@ -130,19 +120,58 @@
 
 
   <script>
-    $.ajax({
-      url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000053",
-      headers: {
-        "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
-      }
-    }).done(function (data) {
-      $("#place_name").append(place_name(data));
-      $("#introduction").append(introduction(data));
-      $("#thumbnail_url").attr('src', thumbnail_url(data));
+
+
+    function place1() {
+      $.ajax({
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000056",
+        headers: {
+          "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
+        }
+      }).done(function (data) {
+        $("#place_name").append(place_name(data));
+        $("#introduction").append(introduction(data));
+        $("#thumbnail_url").attr('src', thumbnail_url(data));
+
+      });
+    }
+    function place2() {
+      $.ajax({
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000057",
+        headers: {
+          "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
+        }
+      }).done(function (data) {
+        $("#place_name2").append(place_name(data));
+        $("#introduction2").append(introduction(data));
+        $("#thumbnail_url2").attr('src', thumbnail_url(data));
+
+      });
+    }
+    function place3() {
+      $.ajax({
+        url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000058",
+        headers: {
+          "Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
+        }
+      }).done(function (data) {
+        $("#place_name3").append(place_name(data));
+        $("#introduction3").append(introduction(data));
+        $("#thumbnail_url3").attr('src', thumbnail_url(data));
+
+      });
+    }
+
+    $.when(place1(), place2(),place3()).done(function (place1_data, place2_data,place3_data) {
+
     });
 
+
+
+
+
     function place_name(data) {
-      return data.result.place_name 
+      return data.result.place_name
     }
 
     function introduction(data) {
@@ -195,13 +224,13 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
 
 
