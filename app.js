@@ -3,20 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mysql = require("mysql");
-var con = mysql.createConnection({
-  host: "localhost", //or name (dns)
-  user: "root",
-  password: "",
-  database: "admin",
-});
-con.connect((err) => {
-  if (err) {
-    console.log("database connect failed...");
-  } else {
-    console.log("database connected...");
-  }
-});
 
 
 
