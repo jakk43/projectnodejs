@@ -1,17 +1,14 @@
 body {
-
   font: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .search {
-
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   width: 300px;
   /* border: solid; */
-
 }
 
 #searchCenter {
@@ -22,7 +19,6 @@ body {
 .cont {
   padding-top: 20px;
 }
-
 
 .frame {
   width: 560px;
@@ -87,6 +83,3 @@ body {
 .containerimg .btn:hover {
   background-color: black;
 }
-
-
-
