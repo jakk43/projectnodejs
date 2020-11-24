@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <script src="/stylesheets/tatapi.js"></script>
-
+  <script src="/stylesheets/home_content.js"></script>
   <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -61,10 +60,6 @@
 
 
 
-  <a href="/content"> content </a>
-
-
-
 
 
 
@@ -75,88 +70,53 @@
     <div class="card-deck">
       <div class="card">
         <div class="containerimg">
-          <img class="card-img-top" alt="..." id="thumbnail_url">
-          <button class="btn">Save</button>
+          <img class="card-img-top, img-thumbnail" alt="..." id="thumbnail_url">
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+          </svg>
         </div>
         <div class="card-body">
-          <h5 class="card-title" id="place_name"></h5>
-          <p class="card-text" id="introduction"></p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 align="center" class="card-title"><a class="place_name" href="/content"></a> </h5>
+          <p class="card-text, intro_text" id="introduction"></p>
+          <p><small id="destination">จังหวัด</small> <small id="attraction_types"></small> </p> 
+          <p class="card-text">  <small class="text-muted" id="update_date" > Last updated </small></p>
         </div>
       </div>
       <div class="card">
         <div class="containerimg">
-          <img class="card-img-top" alt="..." id="thumbnail_url2">
-          <button class="btn">Save</button>
+          <img class="card-img-top, img-thumbnail" alt="..." id="thumbnail_url2">
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+          </svg>
         </div>
         <div class="card-body">
-          <h5 class="card-title" id="place_name2"></h5>
-          <p class="card-text" id="introduction2"></p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 align="center" class="card-title"><a id="place_name2" href="/content"></a> </h5>
+          <p class="card-text, intro_text" id="introduction2"></p>
+          <p><small id="destination2">จังหวัด</small> <small id="attraction_types2"></small> </p> 
+          <p class="card-text">  <small class="text-muted" id="update_date2" > Last updated </small></p>
         </div>
       </div>
       <div class="card">
         <div class="containerimg">
-          <img class="card-img-top" alt="..." id="thumbnail_url3">
-          <button class="btn">Save</button>
+          <img class="card-img-top, img-thumbnail" alt="..." id="thumbnail_url3">
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+          </svg>
         </div>
         <div class="card-body">
-          <h5 class="card-title" id="place_name3"></h5>
-          <p class="card-text" id="introduction3"></p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 align="center" class="card-title"><a class="place_name3" href="/content"></a> </h5>
+          <p class="card-text, intro_text" id="introduction3"></p>
+          <p><small id="destination3">จังหวัด</small> <small id="attraction_types3"></small> </p> 
+          <p class="card-text">  <small class="text-muted" id="update_date3" > Last updated </small></p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- line2 -->
-
-
-
-
-  <div class="container mt-4">
-    <div class="card-deck">
-      <div class="card">
-        <div class="containerimg">
-          <img class="card-img-top" alt="..." id="thumbnail_url4">
-          <button class="btn">Save</button>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title" id="place_name4"></h5>
-          <p class="card-text" id="introduction4"></p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="containerimg">
-          <img class="card-img-top" alt="..." id="thumbnail_url5">
-          <button class="btn">Save</button>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title" id="place_name5"></h5>
-          <p class="card-text" id="introduction5"></p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="containerimg">
-          <img class="card-img-top" alt="..." id="thumbnail_url6">
-          <button class="btn">Save</button>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title" id="place_name6"></h5>
-          <p class="card-text" id="introduction6"></p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
 
 
 
