@@ -14,43 +14,22 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="/">LOGO</a>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <ul>
-          <li class="nav justify-content-center">
-            <a class="nav-link " href="/covid_19"> Update covid 19 </a>
-          </li>
-        </ul>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <div class="btn-group">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static"
-            aria-haspopup="true" aria-expanded="false">
-            <i class='fas fa-user-alt' style='font-size:15px'></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-right">
-            <button class="dropdown-item" type="button"><a href="/login">Login</a></button>
-            <button class="dropdown-item" type="button"><a href="/register">Register</a></button>
-            <button class="dropdown-item" type="button"><a href="/help">Help</a></button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </nav>
+  <!--Navigation bar-->
+  <div class="nav-placeholder">
 
-  <div class="search">
-    <div class="searchCenter">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    <div class="input-group mb-3, container mt-4">
+      <div class="form-group">
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>ทั้งหมด</option>
+          <option>กลาง</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <input type="text" class="form-control" aria-label="Text input with dropdown button">
     </div>
+
 
   </div>
 
@@ -71,46 +50,55 @@
       <div class="card">
         <div class="containerimg">
           <img class="card-img-top, img-thumbnail" alt="..." id="thumbnail_url">
-          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+            <path fill-rule="evenodd"
+              d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
           </svg>
         </div>
         <div class="card-body">
           <h5 align="center" class="card-title"><a class="place_name" href="/content"></a> </h5>
           <p class="card-text, intro_text" id="introduction"></p>
-          <p><small id="destination">จังหวัด</small> <small id="attraction_types"></small> </p> 
-          <p class="card-text">  <small class="text-muted" id="update_date" > Last updated </small></p>
+          <p><small id="destination">จังหวัด</small> <small id="attraction_types"></small> </p>
+          <p class="card-text"> <small class="text-muted" id="update_date"> Last updated </small></p>
         </div>
       </div>
       <div class="card">
         <div class="containerimg">
           <img class="card-img-top, img-thumbnail" alt="..." id="thumbnail_url2">
-          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+            <path fill-rule="evenodd"
+              d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
           </svg>
         </div>
         <div class="card-body">
           <h5 align="center" class="card-title"><a id="place_name2" href="/content"></a> </h5>
           <p class="card-text, intro_text" id="introduction2"></p>
-          <p><small id="destination2">จังหวัด</small> <small id="attraction_types2"></small> </p> 
-          <p class="card-text">  <small class="text-muted" id="update_date2" > Last updated </small></p>
+          <p><small id="destination2">จังหวัด</small> <small id="attraction_types2"></small> </p>
+          <p class="card-text"> <small class="text-muted" id="update_date2"> Last updated </small></p>
         </div>
       </div>
       <div class="card">
         <div class="containerimg">
           <img class="card-img-top, img-thumbnail" alt="..." id="thumbnail_url3">
-          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus, btnsave" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+            <path fill-rule="evenodd"
+              d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
           </svg>
         </div>
         <div class="card-body">
           <h5 align="center" class="card-title"><a class="place_name3" href="/content"></a> </h5>
           <p class="card-text, intro_text" id="introduction3"></p>
-          <p><small id="destination3">จังหวัด</small> <small id="attraction_types3"></small> </p> 
-          <p class="card-text">  <small class="text-muted" id="update_date3" > Last updated </small></p>
+          <p><small id="destination3">จังหวัด</small> <small id="attraction_types3"></small> </p>
+          <p class="card-text"> <small class="text-muted" id="update_date3"> Last updated </small></p>
         </div>
       </div>
     </div>
@@ -145,13 +133,13 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-    </script>
+  </script>
 </body>
 
 

@@ -1,6 +1,10 @@
+
+$.get("nav", function(data){
+  $(".nav-placeholder").replaceWith(data);
+});
 function place1() {
   $.ajax({
-    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000016",
+    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000017",
     headers: {
       Authorization:
         "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2",
@@ -88,3 +92,6 @@ function update_date(data) {
 function web_picture_urls(data, img) {
   return data.result.web_picture_urls[img];
 }
+
+
+

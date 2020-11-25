@@ -26,6 +26,9 @@ router.get("/register", function (req, res, next) {
 router.get("/content", function (req, res, next) {
   res.render("content");
 });
+router.get("/nav", function (req, res, next) {
+  res.render("nav");
+});
 
 var connection = mysql.createConnection({
   host: "localhost", //or name (dns)
