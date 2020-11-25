@@ -1,7 +1,12 @@
 
+
 $.get("nav", function(data){
   $(".nav-placeholder").replaceWith(data);
 });
+
+
+
+
 function place1() {
   $.ajax({
     url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000017",
@@ -17,9 +22,20 @@ function place1() {
     $("#update_date").append(update_date(data));
     $("#thumbnail_url").attr("src", thumbnail_url(data));
     $("#detail").append(detail(data));
-    $("#web_picture_urls_1").attr("src", web_picture_urls(data,0));
-    $("#web_picture_urls_2").attr("src", web_picture_urls(data,1));
-    $("#web_picture_urls_3").attr("src", web_picture_urls(data,2));
+    for (let i = 0; i < 3; i++) {
+      if(web_picture_urls(data,i)!==undefined){
+        $("#web_picture_urls_"+(i+1)).attr("src", web_picture_urls(data,i));
+      }else {
+        $("#web_picture_urls_"+(i+1)).attr("src", web_picture_urls(data,(0)));
+      }
+      
+    }
+
+    console.log(web_picture_urls(data,1))
+
+
+
+
   });
 }
 function place2() {
@@ -90,7 +106,8 @@ function update_date(data) {
   return data.result.update_date;
 }
 function web_picture_urls(data, img) {
-  return data.result.web_picture_urls[img];
+  return data.result.web_picture_urls[img]; 
+
 }
 
 
