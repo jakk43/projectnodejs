@@ -95,3 +95,7 @@ img {
   -webkit-line-clamp: 5; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+
+.textindent{
+  text-indent: 5em;
+}

@@ -9,7 +9,7 @@ $.get("nav", function (data) {
 
 function place1() {
   $.ajax({
-    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000017",
+    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000019",
     headers: {
       Authorization:
         "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2",
