@@ -1,6 +1,6 @@
 
 
-$.get("nav", function(data){
+$.get("nav", function (data) {
   $(".nav-placeholder").replaceWith(data);
 });
 
@@ -20,20 +20,18 @@ function place1() {
     $("#attraction_types").append(attraction_types(data));
     $("#destination").append(destination(data));
     $("#update_date").append(update_date(data));
+    $("#weekday_text").append(weekday_text(data));
+    $("#weekday_text_time").append(weekday_text_time(data));
     $("#thumbnail_url").attr("src", thumbnail_url(data));
     $("#detail").append(detail(data));
     for (let i = 0; i < 3; i++) {
-      if(web_picture_urls(data,i)!==undefined){
-        $("#web_picture_urls_"+(i+1)).attr("src", web_picture_urls(data,i));
-      }else {
-        $("#web_picture_urls_"+(i+1)).attr("src", web_picture_urls(data,(0)));
+      if (web_picture_urls(data, i) !== undefined) {
+        $("#web_picture_urls_" + (i + 1)).attr("src", web_picture_urls(data, i));
+      } else {
+        $("#web_picture_urls_" + (i + 1)).attr("src", web_picture_urls(data, (0)));
       }
-      
+
     }
-
-    console.log(web_picture_urls(data,1))
-
-
 
 
   });
@@ -80,7 +78,7 @@ $.when(place1(), place2(), place3()).done(function (
   place1_data,
   place2_data,
   place3_data
-) {});
+) { });
 
 function place_name(data) {
   return data.result.place_name;
@@ -106,8 +104,26 @@ function update_date(data) {
   return data.result.update_date;
 }
 function web_picture_urls(data, img) {
-  return data.result.web_picture_urls[img]; 
+  return data.result.web_picture_urls[img];
 
+}
+function weekday_text(data) {
+  return data.result.opening_hours.weekday_text.day1.day + "<br>"
+    + data.result.opening_hours.weekday_text.day2.day + "<br>"
+    + data.result.opening_hours.weekday_text.day3.day + "<br>"
+    + data.result.opening_hours.weekday_text.day4.day + "<br>"
+    + data.result.opening_hours.weekday_text.day5.day + "<br>"
+    + data.result.opening_hours.weekday_text.day6.day + "<br>"
+    + data.result.opening_hours.weekday_text.day7.day
+}
+function weekday_text_time(data) {
+  return data.result.opening_hours.weekday_text.day1.time + "<br>"
+    + data.result.opening_hours.weekday_text.day2.time + "<br>"
+    + data.result.opening_hours.weekday_text.day3.time + "<br>"
+    + data.result.opening_hours.weekday_text.day4.time + "<br>"
+    + data.result.opening_hours.weekday_text.day5.time + "<br>"
+    + data.result.opening_hours.weekday_text.day6.time + "<br>"
+    + data.result.opening_hours.weekday_text.day7.time
 }
 
 
