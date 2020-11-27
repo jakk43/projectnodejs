@@ -24,7 +24,7 @@ router.get("/register", function (req, res, next) {
 });
 
 router.get("/content", function (req, res, next) {
-  res.render("content");
+  res.render("contentAll/content");
 });
 router.get("/nav", function (req, res, next) {
   res.render("nav");
@@ -90,10 +90,7 @@ router.post("/login", function (req, res) {
         // console.log('The solution is: ', results);
         if (results.length > 0) {
           if (results[0].password == password) {
-            res.send({
-              code: 200,
-              success: "login sucessfull",
-            });
+            res.render("index");
           } else {
             res.send({
               code: 204,

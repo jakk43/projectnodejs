@@ -1,15 +1,10 @@
-
-
 $.get("nav", function (data) {
   $(".nav-placeholder").replaceWith(data);
 });
 
-
-
-
 function place1() {
   $.ajax({
-    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000019",
+    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000004",
     headers: {
       Authorization:
         "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2",
@@ -19,43 +14,68 @@ function place1() {
     $("#introduction").append(introduction(data));
     $("#attraction_types").append(attraction_types(data));
     $("#destination").append(destination(data));
-    $("#update_date").append(update_date(data));
+    $("#district").append(district(data));
     $("#weekday_text").append(weekday_text(data));
     $("#weekday_text_time").append(weekday_text_time(data));
     $("#thumbnail_url").attr("src", thumbnail_url(data));
     $("#detail").append(detail(data));
     for (let i = 0; i < 3; i++) {
       if (web_picture_urls(data, i) !== undefined) {
-        $("#web_picture_urls_" + (i + 1)).attr("src", web_picture_urls(data, i));
+        $("#web_picture_urls_" + (i + 1)).attr(
+          "src",
+          web_picture_urls(data, i)
+        );
       } else {
-        $("#web_picture_urls_" + (i + 1)).attr("src", web_picture_urls(data, (0)));
+        $("#web_picture_urls_" + (i + 1)).attr(
+          "src",
+          web_picture_urls(data, 0)
+        );
       }
-
     }
 
 
+
+    if(facilities(data) !== undefined){
+      $("#facilities").append("สิ่งอำนวยความสะดวก : "+facilities(data));
+    }else{
+
+    }
   });
 }
+
 function place2() {
   $.ajax({
-    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000001",
+    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000006",
     headers: {
       Authorization:
         "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2",
     },
   }).done(function (data) {
-    $("#place_name2").append(place_name(data));
+    $(".place_name2").append(place_name(data));
     $("#introduction2").append(introduction(data));
     $("#attraction_types2").append(attraction_types(data));
     $("#destination2").append(destination(data));
-    $("#update_date2").append(update_date(data));
+    $("#district2").append(district(data));
+    $("#weekday_text2").append(weekday_text(data));
+    $("#weekday_text_time2").append(weekday_text_time(data));
     $("#thumbnail_url2").attr("src", thumbnail_url(data));
-    // $("#detail2").append(detail(data));
-    // $("#web_picture_urls_1").attr("src", web_picture_urls(data,0));
-    // $("#web_picture_urls_2").attr("src", web_picture_urls(data,1));
-    // $("#web_picture_urls_3").attr("src", web_picture_urls(data,2));
+    $("#detail2").append(detail(data));
+    for (let i = 0; i < 3; i++) {
+      if (web_picture_urls(data, i) !== undefined) {
+        $("#web_picture_urls_2" + (i + 1)).attr(
+          "src",
+          web_picture_urls(data, i)
+        );
+      } else {
+        $("#web_picture_urls_2" + (i + 1)).attr(
+          "src",
+          web_picture_urls(data, 0)
+        );
+      }
+    }
   });
 }
+
 function place3() {
   $.ajax({
     url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000041",
@@ -69,7 +89,6 @@ function place3() {
     $("#detail3").append(detail(data));
     $("#attraction_types3").append(attraction_types(data));
     $("#destination3").append(destination(data));
-    $("#update_date3").append(update_date(data));
     $("#thumbnail_url3").attr("src", thumbnail_url(data));
   });
 }
@@ -78,7 +97,7 @@ $.when(place1(), place2(), place3()).done(function (
   place1_data,
   place2_data,
   place3_data
-) { });
+) {});
 
 function place_name(data) {
   return data.result.place_name;
@@ -100,31 +119,47 @@ function thumbnail_url(data) {
 function destination(data) {
   return data.result.destination;
 }
-function update_date(data) {
-  return data.result.update_date;
+function facilities(data) {
+  return data.result.facilities;
 }
+function district(data) {
+  return data.result.location.district;
+}
+
 function web_picture_urls(data, img) {
   return data.result.web_picture_urls[img];
-
 }
 function weekday_text(data) {
-  return data.result.opening_hours.weekday_text.day1.day + "<br>"
-    + data.result.opening_hours.weekday_text.day2.day + "<br>"
-    + data.result.opening_hours.weekday_text.day3.day + "<br>"
-    + data.result.opening_hours.weekday_text.day4.day + "<br>"
-    + data.result.opening_hours.weekday_text.day5.day + "<br>"
-    + data.result.opening_hours.weekday_text.day6.day + "<br>"
-    + data.result.opening_hours.weekday_text.day7.day
+  return (
+    data.result.opening_hours.weekday_text.day1.day +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day2.day +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day3.day +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day4.day +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day5.day +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day6.day +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day7.day
+  );
 }
 function weekday_text_time(data) {
-  return data.result.opening_hours.weekday_text.day1.time + "<br>"
-    + data.result.opening_hours.weekday_text.day2.time + "<br>"
-    + data.result.opening_hours.weekday_text.day3.time + "<br>"
-    + data.result.opening_hours.weekday_text.day4.time + "<br>"
-    + data.result.opening_hours.weekday_text.day5.time + "<br>"
-    + data.result.opening_hours.weekday_text.day6.time + "<br>"
-    + data.result.opening_hours.weekday_text.day7.time
+  return (
+    data.result.opening_hours.weekday_text.day1.time +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day2.time +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day3.time +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day4.time +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day5.time +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day6.time +
+    "<br>" +
+    data.result.opening_hours.weekday_text.day7.time
+  );
 }
-
-
-
