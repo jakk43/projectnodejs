@@ -20,7 +20,7 @@ function place1() {
     $("#thumbnail_url").attr("src", thumbnail_url(data));
     $("#detail").append(detail(data));
     for (let i = 0; i < 3; i++) {
-      if (web_picture_urls(data, i) !== undefined) {
+      if (web_picture_urls(data, i)!=undefined) {
         $("#web_picture_urls_" + (i + 1)).attr(
           "src",
           web_picture_urls(data, i)
@@ -32,13 +32,8 @@ function place1() {
         );
       }
     }
-
-
-
-    if(facilities(data) !== undefined){
-      $("#facilities").append("สิ่งอำนวยความสะดวก : "+facilities(data));
-    }else{
-
+    if(facilities(data)!=null){
+      $("#facilities").append("สิ่งอำนวยความสะดวก : " + facilities(data));
     }
   });
 }

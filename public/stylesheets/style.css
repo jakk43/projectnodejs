@@ -2,6 +2,7 @@ body {
   font: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+
 .search {
   display: block;
   margin-left: auto;
@@ -76,12 +77,12 @@ body {
   /* padding: 10px 20px; */
   border: none;
   cursor: pointer;
-  border-radius: 10px;
+  /* border-radius: 9px; */
   text-align: center;
 }
 
 .containerimg .btnsave:hover {
-  background-color: red;
+  background-color: rgb(255, 255, 255);
 }
 
 img {
@@ -96,6 +97,6 @@ img {
   -webkit-box-orient: vertical;
 }
 
-.textindent{
+.textindent {
   text-indent: 3em;
 }

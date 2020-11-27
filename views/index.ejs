@@ -17,7 +17,7 @@
   <!-- Nav bar -->
   <div class="nav-placeholder"></div>
 
-  
+
 
 
   <div class="input-group mb-3 container mt-4">
@@ -50,24 +50,32 @@
 
   <div class="container mt-4">
     <div class="card-deck">
+
+
       <div class="card">
-        <div class="containerimg">
-          <img class="card-img-top img-thumbnail" alt="..." id="thumbnail_url">
-          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus btnsave" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
-            <path fill-rule="evenodd"
-              d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
-          </svg>
-        </div>
-        <div class="card-body">
-          <h5 align="center" class="card-title"><a class="place_name" href="/content"></a> </h5>
-          <p class="card-text intro_text" id="introduction"></p>
-          <p><small id="district"> </small> <small id="destination"></small> <small id="attraction_types"></small> </p>
-          <!-- <p class="card-text"> <small class="text-muted" id="update_date"> Last updated </small></p> -->
-        </div>
+        <a class="card-block text-decoration-none text-dark" href="/content">
+          <div>
+            <div class="containerimg">
+              <img class="card-img-top img-thumbnail" alt="..." id="thumbnail_url">
+              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-plus btnsave" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                <path fill-rule="evenodd"
+                  d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
+              </svg>
+            </div>
+            <div class="card-body">
+              <h5 align="center" class="card-title place_name"> </h5>
+              <p class="card-text intro_text" id="introduction"></p>
+              <p><small id="district"> </small> | <small id="destination"></small> <small id="attraction_types">|
+                </small>
+              </p>
+            </div>
+          </div>
+        </a>
       </div>
+
       <div class="card">
         <div class="containerimg">
           <img class="card-img-top img-thumbnail" alt="..." id="thumbnail_url2">
@@ -82,10 +90,12 @@
         <div class="card-body">
           <h5 align="center" class="card-title"><a class="place_name2" href="/content"></a> </h5>
           <p class="card-text intro_text" id="introduction2"></p>
-          <p><small id="district2"> </small> <small id="destination2"></small> <small id="attraction_types2"></small> </p>
+          <p><small id="district2"> </small> <small id="destination2"></small> <small id="attraction_types2"></small>
+          </p>
           <!-- <p class="card-text"> <small class="text-muted" id="update_date"> Last updated </small></p> -->
         </div>
       </div>
+
       <div class="card">
         <div class="containerimg">
           <img class="card-img-top img-thumbnail" alt="..." id="thumbnail_url3">
@@ -100,7 +110,8 @@
         <div class="card-body">
           <h5 align="center" class="card-title"><a class="place_name3" href="/content"></a> </h5>
           <p class="card-text intro_text" id="introduction3"></p>
-          <p><small id="district2"> </small> <small id="destination3"></small> <small id="attraction_types3"></small> </p>
+          <p><small id="district2"> </small> <small id="destination3"></small> <small id="attraction_types3"></small>
+          </p>
           <!-- <p class="card-text"> <small class="text-muted" id="update_date"> Last updated </small></p> -->
         </div>
       </div>
@@ -136,13 +147,13 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
 
 
