@@ -56,11 +56,14 @@ router.post("/register", function (req, res) {
     "INSERT INTO users SET ?",
     users,
     function (error, results, fields) {
+      
+      
+      
       if (error) {
         console.log("error ocurred", error);
         res.send({
           code: 400,
-          failed: "error ocurred",
+          failed: "user name is already in use",
         });
       } else {
         console.log("The solution is: ", results);
