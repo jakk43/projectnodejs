@@ -67,10 +67,7 @@ router.post("/register", function (req, res) {
         });
       } else {
         console.log("The solution is: ", results);
-        res.send({
-          code: 200,
-          success: "user registered sucessfully",
-        });
+        res.render("index");
       }
     }
   );

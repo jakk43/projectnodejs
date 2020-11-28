@@ -21,12 +21,12 @@ function place1() {
     $("#detail").append(detail(data));
     for (let i = 0; i < 3; i++) {
       if (web_picture_urls(data, i)!=undefined) {
-        $("#web_picture_urls_" + (i + 1)).attr(
+        $("#web_picture_urls_1_" + (i + 1)).attr(
           "src",
           web_picture_urls(data, i)
         );
       } else {
-        $("#web_picture_urls_" + (i + 1)).attr(
+        $("#web_picture_urls_1_" + (i + 1)).attr(
           "src",
           web_picture_urls(data, 0)
         );
@@ -37,6 +37,8 @@ function place1() {
     }
   });
 }
+
+
 
 function place2() {
   $.ajax({
@@ -55,25 +57,28 @@ function place2() {
     $("#weekday_text_time2").append(weekday_text_time(data));
     $("#thumbnail_url2").attr("src", thumbnail_url(data));
     $("#detail2").append(detail(data));
-    for (let i = 0; i < 3; i++) {
-      if (web_picture_urls(data, i) !== undefined) {
-        $("#web_picture_urls_2" + (i + 1)).attr(
-          "src",
-          web_picture_urls(data, i)
-        );
-      } else {
-        $("#web_picture_urls_2" + (i + 1)).attr(
-          "src",
-          web_picture_urls(data, 0)
-        );
-      }
+    // for (let i = 0; i < 3; i++) {
+    //   if (web_picture_urls(data, i)!=undefined) {
+    //     $("#web_picture_urls_" + (i + 1)).attr(
+    //       "src",
+    //       web_picture_urls(data, i)
+    //     );
+    //   } else {
+    //     $("#web_picture_urls_" + (i + 1)).attr(
+    //       "src",
+    //       web_picture_urls(data, 0)
+    //     );
+    //   }
+    // }
+    if(facilities(data)!=null){
+      $("#facilities2").append("สิ่งอำนวยความสะดวก : " + facilities(data));
     }
   });
 }
 
 function place3() {
   $.ajax({
-    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000041",
+    url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000007",
     headers: {
       Authorization:
         "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2",
@@ -81,12 +86,47 @@ function place3() {
   }).done(function (data) {
     $(".place_name3").append(place_name(data));
     $("#introduction3").append(introduction(data));
-    $("#detail3").append(detail(data));
     $("#attraction_types3").append(attraction_types(data));
     $("#destination3").append(destination(data));
+    $("#district3").append(district(data));
+    $("#weekday_text3").append(weekday_text(data));
+    $("#weekday_text_time3").append(weekday_text_time(data));
     $("#thumbnail_url3").attr("src", thumbnail_url(data));
+    $("#detail3").append(detail(data));
+    // for (let i = 0; i < 3; i++) {
+    //   if (web_picture_urls(data, i)!=undefined) {
+    //     $("#web_picture_urls_" + (i + 1)).attr(
+    //       "src",
+    //       web_picture_urls(data, i)
+    //     );
+    //   } else {
+    //     $("#web_picture_urls_" + (i + 1)).attr(
+    //       "src",
+    //       web_picture_urls(data, 0)
+    //     );
+    //   }
+    // }
+    if(facilities(data)!=null){
+      $("#facilities3").append("สิ่งอำนวยความสะดวก : " + facilities(data));
+    }
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $.when(place1(), place2(), place3()).done(function (
   place1_data,
