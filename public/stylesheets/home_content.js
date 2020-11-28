@@ -46,8 +46,7 @@ function place2() {
 		$("#weekday_text2").append(weekday_text(data));
 		$("#weekday_text_time2").append(weekday_text_time(data));
 		$("#thumbnail_url2").attr("src", thumbnail_url(data));
-    $("#detail2").append(detail(data));
-    
+		$("#detail2").append(detail(data));
 		if (facilities(data) != null) {
 			$("#facilities2").append("สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
@@ -70,14 +69,11 @@ function place3() {
 		$("#weekday_text_time3").append(weekday_text_time(data));
 		$("#thumbnail_url3").attr("src", thumbnail_url(data));
 		$("#detail3").append(detail(data));
-
 		if (facilities(data) != null) {
 			$("#facilities3").append("สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
-
-
 
 function place4() {
 	$.ajax({
@@ -123,8 +119,7 @@ function place5() {
 		$("#weekday_text5").append(weekday_text(data));
 		$("#weekday_text_time5").append(weekday_text_time(data));
 		$("#thumbnail_url5").attr("src", thumbnail_url(data));
-    $("#detail5").append(detail(data));
-    
+		$("#detail5").append(detail(data));
 		if (facilities(data) != null) {
 			$("#facilities5").append("สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
@@ -147,38 +142,11 @@ function place6() {
 		$("#weekday_text_time6").append(weekday_text_time(data));
 		$("#thumbnail_url6").attr("src", thumbnail_url(data));
 		$("#detail6").append(detail(data));
-
 		if (facilities(data) != null) {
 			$("#facilities6").append("สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $.when(place1(), place2(), place3()).done(function (place1_data, place2_data, place3_data) {});
 $.when(place4(), place5(), place6()).done(function (place4_data, place5_data, place6_data) {});
 
@@ -224,47 +192,4 @@ function weekday_text(data) {
 
 function weekday_text_time(data) {
 	return (data.result.opening_hours.weekday_text.day1.time + "<br>" + data.result.opening_hours.weekday_text.day2.time + "<br>" + data.result.opening_hours.weekday_text.day3.time + "<br>" + data.result.opening_hours.weekday_text.day4.time + "<br>" + data.result.opening_hours.weekday_text.day5.time + "<br>" + data.result.opening_hours.weekday_text.day6.time + "<br>" + data.result.opening_hours.weekday_text.day7.time);
-}
-
-
-
-
-
-
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8,
-    center: { lat: 40.731, lng: -73.997 },
-  });
-  const geocoder = new google.maps.Geocoder();
-  const infowindow = new google.maps.InfoWindow();
-  document.getElementById("submit").addEventListener("click", () => {
-    geocodeLatLng(geocoder, map, infowindow);
-  });
-}
-
-function geocodeLatLng(geocoder, map, infowindow) {
-  const input = document.getElementById("latlng").value;
-  const latlngStr = input.split(",", 2);
-  const latlng = {
-    lat: parseFloat(latlngStr[0]),
-    lng: parseFloat(latlngStr[1]),
-  };
-  geocoder.geocode({ location: latlng }, (results, status) => {
-    if (status === "OK") {
-      if (results[0]) {
-        map.setZoom(11);
-        const marker = new google.maps.Marker({
-          position: latlng,
-          map: map,
-        });
-        infowindow.setContent(results[0].formatted_address);
-        infowindow.open(map, marker);
-      } else {
-        window.alert("No results found");
-      }
-    } else {
-      window.alert("Geocoder failed due to: " + status);
-    }
-  });
 }
