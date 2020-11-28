@@ -14,12 +14,24 @@ router.get("/login", function (req, res, next) {
 router.get("/register", function (req, res, next) {
 	res.render("register");
 });
-router.get("/content", function (req, res, next) {
-	res.render("contentAll/content");
-});
+
 router.get("/nav", function (req, res, next) {
 	res.render("nav");
 });
+
+
+router.get("/content", function (req, res, next) {
+	res.render("contentAll/content");
+});
+router.get("/content2", function (req, res, next) {
+	res.render("contentAll/content2");
+});
+router.get("/content3", function (req, res, next) {
+	res.render("contentAll/content3");
+});
+
+
+
 var connection = mysql.createConnection({
 	host: "localhost", //or name (dns)
 	user: "root",

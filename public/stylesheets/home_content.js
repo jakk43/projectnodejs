@@ -11,22 +11,22 @@ function place1() {
 	}).done(function (data) {
 		$(".place_name").append(place_name(data));
 		$("#introduction").append(introduction(data));
-		$("#attraction_types").append(attraction_types(data));
-		$("#destination").append(destination(data));
-		$("#district").append(district(data));
+		$(".attraction_types").append(attraction_types(data));
+		$(".destination").append(destination(data));
+		$(".district").append(district(data));
 		$("#weekday_text").append(weekday_text(data));
 		$("#weekday_text_time").append(weekday_text_time(data));
 		$("#thumbnail_url").attr("src", thumbnail_url(data));
 		$("#detail").append(detail(data));
-		// for (let i = 0; i < 3; i++) {
-		// 	if (web_picture_urls(data, i) != undefined) {
-		// 		$("#web_picture_urls_1_" + (i + 1)).attr("src", web_picture_urls(data, i));
-		// 	} else {
-		// 		$("#web_picture_urls_1_" + (i + 1)).attr("src", web_picture_urls(data, 0));
-		// 	}
-		// }
+		for (let i = 0; i < 3; i++) {
+			if (web_picture_urls(data, i) != undefined) {
+				$("#web_picture_urls_1_" + (i + 1)).attr("src", web_picture_urls(data, i));
+			} else {
+				$("#web_picture_urls_1_" + (i + 1)).attr("src", web_picture_urls(data, 0));
+			}
+		}
 		if (facilities(data) != null) {
-			$("#facilities").append("สิ่งอำนวยความสะดวก : " + facilities(data));
+			$("#facilities").append("| สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
@@ -40,15 +40,22 @@ function place2() {
 	}).done(function (data) {
 		$(".place_name2").append(place_name(data));
 		$("#introduction2").append(introduction(data));
-		$("#attraction_types2").append(attraction_types(data));
-		$("#destination2").append(destination(data));
-		$("#district2").append(district(data));
+		$(".attraction_types2").append(attraction_types(data));
+		$(".destination2").append(destination(data));
+		$(".district2").append(district(data));
 		$("#weekday_text2").append(weekday_text(data));
 		$("#weekday_text_time2").append(weekday_text_time(data));
 		$("#thumbnail_url2").attr("src", thumbnail_url(data));
 		$("#detail2").append(detail(data));
+		for (let i = 0; i < 3; i++) {
+			if (web_picture_urls(data, i) != undefined) {
+				$("#web_picture_urls_2_" + (i + 1)).attr("src", web_picture_urls(data, i));
+			} else {
+				$("#web_picture_urls_2_" + (i + 1)).attr("src", web_picture_urls(data, 0));
+			}
+		}
 		if (facilities(data) != null) {
-			$("#facilities2").append("สิ่งอำนวยความสะดวก : " + facilities(data));
+			$("#facilities2").append("| สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
@@ -62,13 +69,20 @@ function place3() {
 	}).done(function (data) {
 		$(".place_name3").append(place_name(data));
 		$("#introduction3").append(introduction(data));
-		$("#attraction_types3").append(attraction_types(data));
-		$("#destination3").append(destination(data));
-		$("#district3").append(district(data));
+		$(".attraction_types3").append(attraction_types(data));
+		$(".destination3").append(destination(data));
+		$(".district3").append(district(data));
 		$("#weekday_text3").append(weekday_text(data));
 		$("#weekday_text_time3").append(weekday_text_time(data));
 		$("#thumbnail_url3").attr("src", thumbnail_url(data));
 		$("#detail3").append(detail(data));
+		for (let i = 0; i < 3; i++) {
+			if (web_picture_urls(data, i) != undefined) {
+				$("#web_picture_urls_3_" + (i + 1)).attr("src", web_picture_urls(data, i));
+			} else {
+				$("#web_picture_urls_3_" + (i + 1)).attr("src", web_picture_urls(data, 0));
+			}
+		}
 		if (facilities(data) != null) {
 			$("#facilities3").append("สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
@@ -175,7 +189,7 @@ function destination(data) {
 }
 
 function facilities(data) {
-	return data.result.facilities;
+	return data.result.facilities[0].description;
 }
 
 function district(data) {
