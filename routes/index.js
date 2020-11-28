@@ -29,6 +29,15 @@ router.get("/content2", function (req, res, next) {
 router.get("/content3", function (req, res, next) {
 	res.render("contentAll/content3");
 });
+router.get("/content4", function (req, res, next) {
+	res.render("contentAll/content4");
+});
+router.get("/content5", function (req, res, next) {
+	res.render("contentAll/content5");
+});
+router.get("/content6", function (req, res, next) {
+	res.render("contentAll/content6");
+});
 
 
 

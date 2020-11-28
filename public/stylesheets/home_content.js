@@ -84,7 +84,7 @@ function place3() {
 			}
 		}
 		if (facilities(data) != null) {
-			$("#facilities3").append("สิ่งอำนวยความสะดวก : " + facilities(data));
+			$("#facilities3").append("| สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
@@ -98,44 +98,51 @@ function place4() {
 	}).done(function (data) {
 		$(".place_name4").append(place_name(data));
 		$("#introduction4").append(introduction(data));
-		$("#attraction_types4").append(attraction_types(data));
-		$("#destination4").append(destination(data));
-		$("#district4").append(district(data));
+		$(".attraction_types4").append(attraction_types(data));
+		$(".destination4").append(destination(data));
+		$(".district4").append(district(data));
 		$("#weekday_text4").append(weekday_text(data));
 		$("#weekday_text_time4").append(weekday_text_time(data));
 		$("#thumbnail_url4").attr("src", thumbnail_url(data));
 		$("#detail").append(detail(data));
-		// for (let i = 0; i < 3; i++) {
-		// 	if (web_picture_urls(data, i) != undefined) {
-		// 		$("#web_picture_urls_1_" + (i + 1)).attr("src", web_picture_urls(data, i));
-		// 	} else {
-		// 		$("#web_picture_urls_1_" + (i + 1)).attr("src", web_picture_urls(data, 0));
-		// 	}
-		// }
+		for (let i = 0; i < 3; i++) {
+			if (web_picture_urls(data, i) != undefined) {
+				$("#web_picture_urls_4_" + (i + 1)).attr("src", web_picture_urls(data, i));
+			} else {
+				$("#web_picture_urls_4_" + (i + 1)).attr("src", web_picture_urls(data, 0));
+			}
+		}
 		if (facilities(data) != null) {
-			$("#facilities4").append("สิ่งอำนวยความสะดวก : " + facilities(data));
+			$("#facilities4").append("| สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
 
 function place5() {
 	$.ajax({
-		url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000017",
+		url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/P03000020",
 		headers: {
 			Authorization: "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2",
 		},
 	}).done(function (data) {
 		$(".place_name5").append(place_name(data));
 		$("#introduction5").append(introduction(data));
-		$("#attraction_types5").append(attraction_types(data));
-		$("#destination5").append(destination(data));
-		$("#district5").append(district(data));
+		$(".attraction_types5").append(attraction_types(data));
+		$(".destination5").append(destination(data));
+		$(".district5").append(district(data));
 		$("#weekday_text5").append(weekday_text(data));
 		$("#weekday_text_time5").append(weekday_text_time(data));
 		$("#thumbnail_url5").attr("src", thumbnail_url(data));
 		$("#detail5").append(detail(data));
+		for (let i = 0; i < 3; i++) {
+			if (web_picture_urls(data, i) != undefined) {
+				$("#web_picture_urls_5_" + (i + 1)).attr("src", web_picture_urls(data, i));
+			} else {
+				$("#web_picture_urls_5_" + (i + 1)).attr("src", web_picture_urls(data, 0));
+			}
+		}
 		if (facilities(data) != null) {
-			$("#facilities5").append("สิ่งอำนวยความสะดวก : " + facilities(data));
+			$("#facilities5").append("| สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
@@ -149,15 +156,22 @@ function place6() {
 	}).done(function (data) {
 		$(".place_name6").append(place_name(data));
 		$("#introduction6").append(introduction(data));
-		$("#attraction_types6").append(attraction_types(data));
-		$("#destination6").append(destination(data));
-		$("#district6").append(district(data));
+		$(".attraction_types6").append(attraction_types(data));
+		$(".destination6").append(destination(data));
+		$(".district6").append(district(data));
 		$("#weekday_text6").append(weekday_text(data));
 		$("#weekday_text_time6").append(weekday_text_time(data));
 		$("#thumbnail_url6").attr("src", thumbnail_url(data));
 		$("#detail6").append(detail(data));
+		for (let i = 0; i < 3; i++) {
+			if (web_picture_urls(data, i) != undefined) {
+				$("#web_picture_urls_6_" + (i + 1)).attr("src", web_picture_urls(data, i));
+			} else {
+				$("#web_picture_urls_6_" + (i + 1)).attr("src", web_picture_urls(data, 0));
+			}
+		}
 		if (facilities(data) != null) {
-			$("#facilities6").append("สิ่งอำนวยความสะดวก : " + facilities(data));
+			$("#facilities6").append("| สิ่งอำนวยความสะดวก : " + facilities(data));
 		}
 	});
 }
