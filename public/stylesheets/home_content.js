@@ -3,7 +3,7 @@ $.get("nav", function (data) {
 });
 
 function place1() {
-	var myplace = ['P03000004', "P03000006", "P03000003", "P03000008", "P03000019", "P03000020"];
+	var myplace = ['P03000004', "P03000006", "P03000001", "P03000008", "P03000019", "P03000020"];
 	for (let i = 0; i < myplace.length; i++) {
 		$.ajax({
 			url: "https://tatapi.tourismthailand.org/tatapi/v5/attraction/" + myplace[i] + "",

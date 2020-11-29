@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 var mysql = require("mysql");
+const bodyparser = require('body-parser') 
+
 /* GET home page. */
 router.get("/", function (req, res, next) {
 	res.render("index");
@@ -17,6 +19,9 @@ router.get("/register", function (req, res, next) {
 
 router.get("/nav", function (req, res, next) {
 	res.render("nav");
+});
+router.get("/searchplace", function (req, res, next) {
+	res.render("searchplace");
 });
 
 
