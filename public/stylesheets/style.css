@@ -1,5 +1,6 @@
 body {
 	font: "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: aliceblue;;
 }
 .search {
 	display: block;
@@ -21,32 +22,12 @@ body {
 	height: 400px;
 	display: block;
 	border-style: none;
-	/* -ms-transform: scale(0.79);
-  -moz-transorm: scale(0.79);
-  -o-transform: scale(0.79);
-  -webkit-transform: scale(0.79);
-  transform: scale(0.79);
-  -ms-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0; */
 }
 .frame2 {
 	width: 560px;
 	height: 700px;
 	display: block;
 	border-style: none;
-	/* -ms-transform: scale(0.5);
-  -moz-transform: scale(0.5);
-  -o-transform: scale(0.5);
-  -webkit-transform: scale(0.5);
-  transform: scale(1);
-  -ms-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0; */
 }
 .containerimg {
 	position: relative;
@@ -90,3 +71,22 @@ img {
 .textindent {
 	text-indent: 3em;
 }
+
+
+.card{
+	background-color: #f8f8f8;
+}
+
+
+/* src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1p8pqMC6cdgz845HJkZy-e_8Yc9oY3LA&callback=initMap&libraries=&v=weekly" */
+
+    /* Set the size of the div element that contains the map */
+    .map {
+		height: 400px;
+		/* The height is 400 pixels */
+		width: 100;
+		/* The width is the width of the web page */
+	  }
+
+
+

@@ -25,6 +25,7 @@ router.get("/searchplace", function (req, res, next) {
 });
 
 
+
 router.get("/content", function (req, res, next) {
 	res.render("contentAll/content");
 });

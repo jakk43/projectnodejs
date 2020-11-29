@@ -8,9 +8,10 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1p8pqMC6cdgz845HJkZy-e_8Yc9oY3LA&callback=initMap&libraries=&v=weekly" defer></script>
 	<script src="/stylesheets/home_content.js"></script>
-  <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
-  <title class="place_name1"></title>
+	<link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+	<title class="place_name1"></title>
 </head>
 
 <body>
@@ -38,10 +39,10 @@
 							</div>
 						</div>
 					</div>
-					<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">	<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
@@ -58,7 +59,7 @@
 								<footer class="blockquote-footer">
 									<a class="card-block text-decoration-none text-dark" href="#"> <span class="district1"></span>
 									</a>|
-									<a class="card-block text-decoration-none text-dark" href="#"> <span class="destination1"></span> 
+									<a class="card-block text-decoration-none text-dark" href="#"> <span class="destination1"></span>
 									</a>|
 									<a class="card-block text-decoration-none text-dark" href="#"> <span class="attraction_types1"></span>
 									</a> <span class="text-dark" id="facilities1"></span>
@@ -79,10 +80,14 @@
 					</div>
 				</div>
 			</div>
+			<br>
+			<div class="map" id="map1"></div>
 		</div>
+		<br>
 	</div>
 	</div>
 	</div>
+
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
