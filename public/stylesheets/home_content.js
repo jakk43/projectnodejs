@@ -111,3 +111,52 @@ function initMap(a, b, c) {
 		map: map,
 	});
 }
+
+
+
+  function show_search(){
+	// var e = document.getElementById("elementId");
+	// var showmyprovince = e.options[e.selectedIndex].value;
+
+	function createNode(element) {
+		return document.createElement(element)
+	  }
+	
+	  function append(parent, el) {
+		return parent.appendChild(el)
+	  }
+	  const ul = document.getElementById('show')
+
+  fetch('https://tatapi.tourismthailand.org/tatapi/v5/places/search?provinceName='+"ชลบุรี"+'&categories=ATTRACTION', {
+	  method: "GET",
+	  headers: {
+		"Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
+	  }
+	})
+	.then(response => response.json())
+	.then(function (data) {
+	  console.log(data)
+	  let shows = data.result;
+	  return shows.map(function (show) {
+		let li = createNode('li')
+		let img = createNode('img')
+		let span = createNode('span')
+		// let p = createNode('p')
+		let hr=createNode('hr')
+
+		// img.src = show.thumbnail_url
+		span.innerHTML = `${show.place_name}`
+		// append(li, img)
+		append(li, span)
+		append(li, hr)
+		append(ul, li)
+	  })
+	}).catch(function (error) {
+	  console.log(error)
+	})
+  }
+
+
+  function c_page_show(){
+	window.location.pathname = 'http://localhost:3000/show_search'
+  }

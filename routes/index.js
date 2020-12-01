@@ -20,8 +20,11 @@ router.get("/register", function (req, res, next) {
 router.get("/nav", function (req, res, next) {
 	res.render("nav");
 });
-router.get("/searchplace", function (req, res, next) {
-	res.render("searchplace");
+router.get("/show_search", function (req, res, next) {
+	res.render("show_search");
+});
+router.get("/select", function (req, res, next) {
+	res.render("select");
 });
 
 
