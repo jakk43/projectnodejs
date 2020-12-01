@@ -1,6 +1,9 @@
 $.get("nav", function (data) {
 	$(".nav-placeholder").replaceWith(data);
 });
+$.get("select", function (data) {
+	$(".inlineFormCustomSelectProvince").replaceWith(data);
+});
 var myplace = ["P03000004", "P03000006", "P03000001", "P03000008", "P03000019", "P03000020", ];
 
 function place1() {
@@ -22,7 +25,7 @@ function place1() {
 			$("#detail" + (i + 1)).append(detail(data));
 			//   $("#latitude" + (i + 1)).append(latitude(data));
 			//   $("#longitude" + (i + 1)).append(longitude(data));
-			if ((latitude(data) && longitude(data)) != null || undefined) {
+			if ( !empty((latitude(data) && longitude(data)))) {
 				initMap(latitude(data), longitude(data), "map" + (i + 1));
 			}
 			console.log(place_name(data));
@@ -37,7 +40,7 @@ function place1() {
 					$("#web_picture_urls_" + count).attr("src", web_picture_urls(data, 0));
 				}
 			}
-			if (facilities(data) != null || undefined) {
+			if ( !empty(facilities(data)) ) {
 				$("#facilities" + (i + 1)).append("| สิ่งอำนวยความสะดวก : " + facilities(data));
 			}
 		});
@@ -115,8 +118,8 @@ function initMap(a, b, c) {
 
 
   function show_search(){
-	// var e = document.getElementById("elementId");
-	// var showmyprovince = e.options[e.selectedIndex].value;
+	var e = document.getElementById("inlineFormCustomSelectProvince");
+	var showmyprovince = e.options[e.selectedIndex].value;
 
 	function createNode(element) {
 		return document.createElement(element)
@@ -127,7 +130,7 @@ function initMap(a, b, c) {
 	  }
 	  const ul = document.getElementById('show')
 
-  fetch('https://tatapi.tourismthailand.org/tatapi/v5/places/search?provinceName='+"ชลบุรี"+'&categories=ATTRACTION', {
+  fetch('https://tatapi.tourismthailand.org/tatapi/v5/places/search?provinceName='+showmyprovince+'&categories=ATTRACTION', {
 	  method: "GET",
 	  headers: {
 		"Authorization": "Bearer GqQmVELC0cHh9qrGNUDrl9KkZKQCWd9s6Yg1u9oUVbTqXKdXHWkl)9bjDd3gDQcFvTHPbQfsZlv3b)pqv)taLpW=====2"
@@ -143,13 +146,18 @@ function initMap(a, b, c) {
 		let span = createNode('span')
 		// let p = createNode('p')
 		let hr=createNode('hr')
+		img.src = show.thumbnail_url
+		span.innerHTML = `${show.place_name}` +"-"+`${show.category_description}`
+		console.log(img.src)
 
-		// img.src = show.thumbnail_url
-		span.innerHTML = `${show.place_name}`
-		// append(li, img)
-		append(li, span)
+		
+		if(!empty(show.thumbnail_url)){
+		append(li, img)
+		append(li, span )
 		append(li, hr)
 		append(ul, li)
+		
+		}
 	  })
 	}).catch(function (error) {
 	  console.log(error)
@@ -157,6 +165,20 @@ function initMap(a, b, c) {
   }
 
 
-  function c_page_show(){
-	window.location.pathname = 'http://localhost:3000/show_search'
+
+  function empty(e) {
+	switch (e) {
+	  case "":
+	  case 0:
+	  case "0":
+	  case null:
+	  case false:
+	  case typeof(e) == "undefined":
+		return true;
+	  default:
+		return false;
+	}
   }
+  function refreshPage(){
+    window.location.reload();
+} 

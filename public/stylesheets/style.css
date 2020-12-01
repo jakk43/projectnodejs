@@ -60,6 +60,10 @@ img {
 	width: 100%;
 	height: auto;
 }
+.imgsSize {
+	width: 200px;
+	height: 170px;
+}
 .intro_text {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -90,3 +94,15 @@ img {
 
 
 
+ ul li img{
+	width: 300px;
+
+
+	
+}
+ ul li {
+	text-indent: 2;
+
+
+	
+}

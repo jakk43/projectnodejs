@@ -17,7 +17,7 @@
 		<form>
 			<div class="form-row align-items-center">
 				<div class="col-auto my-1">
-					<select class="custom-select mr-sm-2"  id="inlineFormCustomSelectProvince">
+					<select class="custom-select mr-sm-2"  id="inlineFormCustomSelectProvince" class="inlineFormCustomSelectProvince">
 						<option value="" selected>--------- เลือกจังหวัด ---------</option>
 						<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 						<option value="กระบี่">กระบี่</option>
@@ -99,7 +99,9 @@
 					</select>
 				</div>
 				<div class="col-auto my-1">
-					<button type="submit" class="btn btn-primary" onclick=c_page_show()>Search</button>
+
+                    <a class="btn btn-primary btn-md active" role="button" aria-pressed="true" onclick="show_search()">Search</a>
+
 				</div>
 			</div>
 		</form>
