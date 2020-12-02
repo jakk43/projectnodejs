@@ -147,7 +147,7 @@ function initMap(a, b, c) {
 		// let p = createNode('p')
 		let hr=createNode('hr')
 		img.src = show.thumbnail_url
-		span.innerHTML = "&nbsp;&nbsp;&nbsp;"+`${show.place_name}` +" | "+`${show.category_description}`
+		span.innerHTML = "&nbsp;&nbsp;&nbsp;"+"<strong>"+`${show.place_name}`+"</strong>" +" | "+`${show.category_description}`
 		console.log(img.src)
 
 		
