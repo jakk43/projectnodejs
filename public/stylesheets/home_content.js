@@ -4,7 +4,7 @@ $.get("nav", function (data) {
 $.get("select", function (data) {
 	$(".inlineFormCustomSelectProvince").replaceWith(data);
 });
-var myplace = ["P03000004", "P03000006", "P03000001", "P03000008", "P03000019", "P03000020", ];
+var myplace = ["P03000004", "P03000006", "P03000001", "P03000008", "P03000019", "P03000020", "P03000041", "P03000045", "P03000052" ];
 
 function place1() {
 	for (let i = 0; i < myplace.length; i++) {
@@ -147,7 +147,7 @@ function initMap(a, b, c) {
 		// let p = createNode('p')
 		let hr=createNode('hr')
 		img.src = show.thumbnail_url
-		span.innerHTML = `${show.place_name}` +"-"+`${show.category_description}`
+		span.innerHTML = "&nbsp;&nbsp;&nbsp;"+`${show.place_name}` +" | "+`${show.category_description}`
 		console.log(img.src)
 
 		
@@ -156,7 +156,6 @@ function initMap(a, b, c) {
 		append(li, span )
 		append(li, hr)
 		append(ul, li)
-		
 		}
 	  })
 	}).catch(function (error) {

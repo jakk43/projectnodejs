@@ -14,11 +14,11 @@
 
 <body>
 	<div class=" mt-4" style="margin-left:41%;">
-		<form>
+		<form action="/show_search" method="get">
 			<div class="form-row align-items-center">
 				<div class="col-auto my-1">
 					<select class="custom-select mr-sm-2"  id="inlineFormCustomSelectProvince" class="inlineFormCustomSelectProvince">
-						<option value="" selected>--------- เลือกจังหวัด ---------</option>
+						<option value=""  selected>--------- ทุกจังหวัด ---------</option>
 						<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 						<option value="กระบี่">กระบี่</option>
 						<option value="กาญจนบุรี">กาญจนบุรี</option>
@@ -100,8 +100,7 @@
 				</div>
 				<div class="col-auto my-1">
 
-                    <a class="btn btn-primary btn-md active" role="button" aria-pressed="true" onclick="show_search()">Search</a>
-
+                    <a class="btn btn-primary btn-md active" role="button" aria-pressed="true" onclick="show_search()"  >Search</a>
 				</div>
 			</div>
 		</form>
